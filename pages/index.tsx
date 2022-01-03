@@ -3,8 +3,10 @@ import * as React from "react";
 import * as Chakra from "@chakra-ui/react";
 
 export default function HomePage() {
+  const { colorMode, toggleColorMode } = Chakra.useColorMode();
   return (
-    <Chakra.Stack as="section" p={4}>
+    <Chakra.Stack as="section" p={4} spacing={4}>
+      <Chakra.Button onClick={toggleColorMode}>Toggle theme (current is {colorMode})</Chakra.Button>
       <Chakra.Heading>Hello, world!</Chakra.Heading>
       <Chakra.Text>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam porro ullam, facere accusantium ducimus suscipit
